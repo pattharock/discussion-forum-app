@@ -2,9 +2,9 @@
 A Full-Stack ExpressJS implementation of a Question Discussion Forum Platform.
 
 ## Requirements
- * NodeJS: "v12.18.0"
- * ExpressJS: "^4.17.1"
- * MongoDB: "MongoDB shell version v4.2.7"
+ * NodeJS: >= "v12.18.0"
+ * ExpressJS: >= "^4.17.1"
+ * MongoDB: >= "MongoDB shell version v4.2.7"
 
 ## How to run locally
 
