@@ -1,0 +1,43 @@
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='stylesheet' href='/style/style.css')
+        title Kohra
+    body.new-question
+        if user
+            a#back(href="/") Back
+            <div class="question-form">
+                <form action="question-form" method="POST">
+                    <h1>Ask your Question</h1>
+                    <p class="title-group">
+                        <label for="quesTitle">Title</label>
+                        <br>
+                        <input type="text" name="quesTitle">
+                    </p>
+                    <p class="space-group">
+                        <label for="quesSpace"> Space </label>
+                        <br>
+                        <input type="radio" name="quesSpace" value="Algorithm">
+                        <span class="space-description">Algorithm</span>
+                        <input type="radio" name="quesSpace" value="Machine Learning">
+                        <span class="space-description">Machine Learning</span>
+                        <input type="radio" name="quesSpace" value="System">
+                        <span class="space-description">System</span>
+                        <input type="radio" name="quesSpace" value="Javascript">
+                        <span class="space-description">Javascript</span>
+                    </p>
+                    <p class="content-group">
+                        <label for="quesContent">Content</label>
+                        <br>
+                        <textarea name="quesContent" rows="4" cols="50"></textarea>
+                    </p>
+                    p#chkMsg
+                        = msg || ""
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        else
+            p
+                = "NOT AUTHORISED"

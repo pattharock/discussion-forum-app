@@ -1,0 +1,99 @@
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='stylesheet' href='/style/style.css')
+        title Kohra
+    body.question-detail
+        script(src="/js/questionDetail.js")
+        a#back(href='/') Back
+        <div class="question">
+            div.question-update-form
+                form(action="/updateques"+result._id method="POST")
+                    <p class="title-group">
+                        <label for="quesTitle">Title</label>
+                        <br>
+                        <input type="text" name="quesTitle" required>
+                    </p>
+                    <p class="space-group">
+                        <label for="quesSpace"> Space </label>
+                        <br>
+                        <input type="radio" name="quesSpace" value="Algorithm" required>
+                        <span class="space-description">Algorithm</span>
+                        <input type="radio" name="quesSpace" value="Machine Learning" required>
+                        <span class="space-description">Machine Learning</span>
+                        <input type="radio" name="quesSpace" value="System" required>
+                        <span class="space-description">System</span>
+                        <input type="radio" name="quesSpace" value="Javascript" required>
+                        <span class="space-description">Javascript</span>
+                    </p>
+                    <p class="content-group">
+                        <label for="quesContent">Content</label>
+                        <br>
+                        <textarea name="quesContent" rows="4" cols="50" required></textarea>
+                    </p>
+                    p#chkMsg
+                    = msg || ""
+                    <input type="submit" value="Submit">
+                    <button href="#" id="cnclBtn">Cancel</buttton>
+            div.edit-toggle
+                div.question-crud
+                    if user && (user.uid === result.creatorid)
+                        a(href="/deleteques"+result._id class="right")
+                            = "Delete"
+                        button(class="right")
+                            = "Edit"
+                div.question-space
+                    span
+                        = result.space
+                div.name-date-block
+                    span.name
+                        = result.creatorName
+                    span.date
+                        = "posted on " + result.toObject().time.toString().slice(4, 15)
+                <div class="question-description">
+                    h3
+                        = result.title
+                    p
+                        = result.content
+                </div>
+                div.question-upvote
+                    if user
+                        a(href='/upvote/qid' + result.toObject()._id)
+                            = "Upvotes(" + result.up.length + ")"
+                    else
+                        a(href="#")
+                            = "Upvotes(" + result.up.length + ")"
+                    button(href="#")
+                        = "Answers("+result.answer.length+")"
+        </div>
+        <div class="answer-hidden">
+            each ans in result.answer
+                <div class="answer">
+                    div.name-date-block
+                        span.name
+                            = ans.uname
+                        span.date
+                            = 'answered on ' + ans.toObject().time.toString().slice(4, 15)
+                        if user && (user.uid == ans.uid)
+                            a(href="/deleteans"+ans._id+"/ques"+result._id class="right")
+                                = "Delete"
+                    <div class = "answer-description">
+                    p
+                        = ans.content
+                    </div>
+                </div>
+            if user
+                <div class="user-answer">
+                    div.user-name
+                        = user.name
+                    div.answer-label
+                        form(action="/detailques/qid"+result._id method="POST")
+                            input(type="textarea" rows="2" cols="50" name="userAnswer" placeholder= "Post your new answer.")
+                            p(class="buttons-container")
+                                input(type="submit" class="hidden")
+                                button(class="hidden float") Cancel
+                </div>
+        </div>
+

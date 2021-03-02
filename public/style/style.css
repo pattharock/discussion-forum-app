@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.home .navbar{
+    margin: 0;
+    padding: 0;
+    height: 4rem;
+}
+.home{
+    margin: 0;
+    width: 100%;
+}
+.home .header{
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.home .header ul{
+    font-size: 1.5rem;
+    background: salmon;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    list-style: none;
+}
+.home .header ul li{
+    float: left;
+    text-align: center;
+    width: 7rem;
+    padding: 1rem;
+}
+.home .header ul li a{
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+.home .header ul li a:hover{
+    background: white;
+    color: salmon;
+}
+.home .header ul li button#sortByUp{
+    display: block;
+    width: 100%;
+    color: white;
+    background: salmon;
+    text-decoration: none;
+    border:none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto;
+}
+.home .header ul li button#sortByUp:hover{
+    background: white;
+    color: salmon;
+}
+.home .header ul input{
+    margin: 1rem 2rem;
+    width: 20%;
+}
+.home .header ul li.heading{
+    font-weight: bold;
+}
+.home .header ul li.right{
+    float: right;
+}
+
+.home .leftmenu ul{
+    background: #e3e3e3;
+    list-style-type: none;
+    margin: 0;
+    padding: 7rem 0;
+    text-align: center;
+    width: 25%;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    color: salmon;
+}
+.home .leftmenu ul li a {
+    display: block;
+    color: salmon;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+.home .leftmenu ul li a:hover{
+    color: #e3e3e3;
+    background: salmon;
+}
+
+.home .content{
+    font-family: "Roboto", sans-serif;
+    margin-left: 25%;
+    height: 100%;
+    width: 75%;
+    overflow: auto;
+    background: #f6efef;
+    position: relative;
+    top: 4rem;
+}
+
+.home .content .question{
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto 1.5rem;
+    width: 80%;
+    border-radius: 0.5rem;
+}
+.home .content .askQuestion{
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto 1.5rem;
+    padding: 1rem 0.5rem;
+    width: 80%;
+    border-radius: 0.5rem;
+}
+.home .content .askQuestion a{
+    float: right;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding:  0.4rem 1rem;
+    background: salmon;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+}
+.home .content .askQuestion a:hover{
+    background: darksalmon;
+}
+.home .content .askQuestion .userLabel h3{
+    color: #028692;
+    padding-left: 1rem;
+}
+.home .content .askQuestion .userLabel p{
+    color: dimgrey;
+    padding-bottom: 1rem;
+}
+
+.home .content .askQuestion .userLabel p a{
+    text-decoration: none;
+    font-weight: bold;
+    color: dimgrey;
+    background: none;
+    float: left;
+}
+
+.home .content .askQuestion .userLabel p a:hover{
+    color: gray;
+}
+
+.home .content .question .question-flex{
+    margin: 0.3rem;
+    padding: 1rem;
+    display: flex;
+}
+.home .content .question .question-flex .question-left{
+    flex-basis: 20%;
+}
+.home .content .question .question-flex .question-left .space{
+    color: white;
+    font-weight: bold;
+    background: salmon;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+.home .content .question .question-flex .question-right{
+    flex-basis: 80%;
+}
+.home .content .question .question-flex .question-right h3 a{
+    text-decoration: none;
+    color: black;
+}
+.home .content .question .question-flex .question-right h3 a:hover{
+    color: gray;
+}
+.home .content .question .question-flex .question-right p{
+    overflow: hidden;
+    height: 3.6rem;
+}
+.home .content .question .question-flex .question-right button{
+    float: right;
+    font-size: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    color: white;
+    background: salmon;
+    border-radius: 0.3rem;
+}
+.home .content .question .question-flex .question-right button:hover{
+    background: darksalmon;
+}
+.home .content .question .question-bottom span{
+    margin-right: 2rem;
+}
+.home .content .question .question-bottom span button{
+    color: darkgrey;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.home .content .question .question-bottom span button:hover{
+    text-decoration: underline;
+    font-size: larger;
+}
+.home .content .question .question-bottom span a{
+    color: darkgrey;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.home .content .question .question-bottom span a:hover{
+    text-decoration: underline;
+    font-size: larger;
+}
+.home .content .question .question-bottom{
+    margin: 0.3rem;
+    flex-basis: 100%;
+}
+.home .content .answer-hidden{
+    display: none;
+}
+.home .answer{
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+    margin: 1rem auto 1.5rem;
+    width: 75%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.home .answer .name-date-block{
+    margin: 0.7rem auto;
+}
+.home .answer .name-date-block span{
+    margin: 0.7rem 1rem 0.7rem 0.5rem;
+}
+.home .answer .name-date-block .name{
+    color: #028692;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.home .answer .name-date-block .date{
+    color: dimgrey;
+}
+.home .user-answer{
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+    margin: 1rem auto 1.5rem;
+    width: 75%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.home .user-answer .user-name{
+    color: #028692;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem 0.5rem;
+}
+.home .user-answer .answer-label{
+    font-weight: bold;
+    color: dimgrey;
+    margin: 1rem 0.5rem;
+}
+.home .user-answer .answer-label .hidden{
+    visibility: hidden;
+}
+.home .user-answer .answer-label form input[type="textarea"]{
+    border: none;
+    font-size: 1rem;
+    width: 90%;
+    height: 2rem;
+}
+
+.login {
+    background: #f6efef;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.login a#back{
+    text-decoration: none;
+    color: #028692;
+}
+.login a#back:hover{
+    font-size: larger;
+}
+.login .form-login{
+    background: #e0b1ac;
+    border-radius: 0.8rem;
+    width: 50%;
+    margin: 15% auto 2rem;
+    text-align: center;
+}
+.login .form-login h1{
+    padding: 1rem;
+}
+.login .form-login input[type="submit"]{
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    background: black;
+    color: white;
+    border: none;
+    margin: 1rem;
+    width: 30%;
+    border-radius: 0.5rem;
+}
+.login .form-login input[type="submit"]:hover {
+    background: gray;
+}
+.login .form-login #loginMsg{
+    color: #ee1303;
+}
+.login .form-register{
+    width: 50%;
+    margin: 2rem auto;
+    text-align: center;
+}
+.login .form-register p{
+    color: #028692;
+}
+.login .form-register a{
+    font-size: 1.5rem;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    background: black;
+    color: white;
+    border: none;
+    margin: 1rem auto;
+    text-decoration: none;
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.login .form-register a:hover{
+    background: gray;
+}
+
+
+.register{
+    background: #f6efef;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.register a#back{
+    text-decoration: none;
+    color: #028692;
+}
+.register a#back:hover{
+    font-size: larger;
+}
+.register .form-register{
+    background: #e0b1ac;
+    border-radius: 0.8rem;
+    width: 50%;
+    margin: 15% auto 2rem;
+    text-align: center;
+}
+.register .form-register input[type="submit"]{
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    background: black;
+    color: white;
+    border: none;
+    margin: 1rem;
+    width: 30%;
+    border-radius: 0.5rem;
+}
+.register .form-register input[type="submit"]:hover{
+    background: gray;
+}
+.register .form-register #registerMsg{
+    color: #ee1303;
+}
+.register .form-register #registerLogin{
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.question-detail{
+    background: #f6efef;
+    font-family: 'Roboto', sans-serif;
+}
+.question-detail #back{
+    color: #028692;
+}
+.question-detail #back:hover{
+    font-size: larger;
+}
+.question-detail .question{
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+    margin: 1rem auto 1.5rem;
+    width: 90%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.question-detail .question .question-crud a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: salmon;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    margin: auto 0.5rem;
+}
+.question-detail .question .question-crud a:hover{
+    background-color: darksalmon;
+}
+.question-detail .question .question-crud .right{
+    float: right;
+}
+.question-detail .question .question-upvote a{
+    color: dimgrey;
+    text-decoration: none;
+    margin: auto 0.5rem 1.5rem;
+}
+.question-detail .question .question-upvote a:hover{
+    font-size: larger;
+}
+.question-detail .question .question-upvote button{
+    color: dimgrey;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: auto 0.5rem 1.5rem;
+}
+.question-detail .question .question-upvote button:hover{
+    font-size: larger;
+}
+.question-detail .question .question-space{
+    margin: 0.5rem;
+}
+.question-detail .question .question-space span {
+    color: white;
+    font-weight: bold;
+    background: salmon;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+.question-detail .question .name-date-block{
+    margin: 0.7rem auto;
+}
+.question-detail .question .name-date-block span{
+    margin: 0.7rem 1rem 0.7rem 0.5rem;
+}
+.question-detail .question .name-date-block .name{
+    color: #028692;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.question-detail .question .name-date-block .date{
+    color: dimgrey;
+}
+.question-detail .answer-hidden .name-date-block .right{
+    float: right;
+}
+.question-detail .answer-hidden .name-date-block a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background: salmon;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+.question-detail .answer-hidden .name-date-block a:hover{
+    background: darksalmon;
+}
+.question-detail .question-crud button{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: salmon;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+.question-detail .question-crud button:hover{
+    background: darksalmon;
+}
+.question-detail .question .question-description{
+    margin: auto 0.5rem;
+}
+.question-detail .answer{
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+    margin: 1rem auto 1.5rem;
+    width: 85%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.question-detail .answer .name-date-block{
+    margin: 0.7rem auto;
+}
+.question-detail .answer .name-date-block span{
+    margin: 0.7rem 1rem 0.7rem 0.5rem;
+}
+.question-detail .answer .name-date-block .name{
+    color: #028692;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.question-detail .answer .name-date-block .date{
+    color: dimgrey;
+}
+.question-detail .user-answer{
+    background: white;
+    box-shadow: 0.2rem 0.2rem 0.2rem dimgrey;
+    margin: 1rem auto 1.5rem;
+    width: 85%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.question-detail .user-answer .user-name{
+    color: #028692;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem 0.5rem;
+}
+.question-detail .user-answer .answer-label{
+    font-weight: bold;
+    color: black;;
+    margin: 1rem 0.5rem;
+}
+.question-detail .user-answer .answer-label .hidden{
+    /*visibility: hidden;*/
+}
+.question-detail .answer-hidden{
+    display: none;
+}
+.question-detail .user-answer .answer-label form input[type="textarea"]{
+    border: none;
+    font-size: 1rem;
+    width: 90%;
+    height: 2rem;
+}
+.question-detail .user-answer .answer-label form input[type="submit"]{
+    border: none;
+    margin-right: 1rem;
+    border-radius: 0.3rem;
+    background: salmon;
+    display: block;
+    color: white;
+    font-size: 0.8rem;
+}
+.question-detail .user-answer .answer-label form input[type="submit"]:hover{
+    background: darksalmon;
+}
+.question-detail .user-answer .answer-label form button {
+    border: none;
+    border-radius: 0.3rem;
+    background: salmon;
+    color: white;
+    font-size: 0.8rem;
+}
+.question-detail .user-answer .answer-label form button:hover{
+    background: darksalmon;
+}
+.question-detail .user-answer .answer-label form .float{
+    float: right;
+}
+.question-detail .user-answer .answer-label form .buttons-container{
+    display: flex;
+}
+.question-detail .question .question-update-form{
+    display: none;
+}
+.question-detail .question .question-update-form form input[type='submit']{
+    border-radius: 0.3rem;
+    border:none;
+    background: salmon;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.question-detail .question .question-update-form form input[type='submit']:hover{
+    background: darksalmon;
+}
+.question-detail .question .question-update-form form button{border-radius: 0.3rem;
+    border:none;
+    background: salmon;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.question-detail .question .question-update-form form button:hover{
+    background: darksalmon;
+}
+
+.new-question a#back{
+    color: #028692;
+    text-decoration: none;
+}
+.new-question a#back:hover{
+    font-size: larger;
+}
+.new-question{
+    background: #f6efef;
+    font-family: 'Roboto', sans-serif;
+}
+.new-question .question-form{
+    background: #e0b1ac;
+    border-radius: 0.8rem;
+    width: 50%;
+    margin: 15% auto 2rem;
+    padding: 1rem;
+}
+.new-question .question-form input[type="submit"]{
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    background: black;
+    color: white;
+    border: none;
+    margin: 1rem;
+    width: 30%;
+    border-radius: 0.5rem;
+}
+.new-question .question-form input[type="submit"]:hover{
+    background: gray;
+}
+.new-question .question-form #chkMsg{
+    color: #ee1303;
+}
+
+
+
+
+
+
