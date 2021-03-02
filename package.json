@@ -1,0 +1,20 @@
+{
+  "name": "Project",
+  "version": "1.0.0",
+  "description": "This application is a simple QUORA clone with all CRUD functionalities as well as user authentication and registration functionalities implemented. Technologies leveraged include MongoDB & mongoose, NodeJS & express, Pug(view engine)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ritvik Singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.11.3",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "uuid": "^8.3.1"
+  }
+}

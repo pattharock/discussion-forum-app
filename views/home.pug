@@ -1,0 +1,110 @@
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='stylesheet' href='/style/style.css')
+        title Kohra
+    body.home
+        script(src="/js/home.js")
+        div.header
+            ul.navbar
+                li.heading
+                    a(href='/') KOHRA
+                li
+                    a(href='/') Home
+                li
+                    button(id="sortByUp") HOT
+                input(type='text' placeholder='Search' name='searchBar' id="searchBar")
+                if user && user.loggedin
+                    li.right
+                        a(href="/login?action=logout" id="logout") LOGOUT
+                else
+                    li.right
+                        a(href='/login' id="login") Login
+                    li.right
+                        a(href='/register' id="register") REGISTER
+        div.leftmenu
+            ul
+                li
+                    a(href='/sortbyspace/Algorithm') Algorithms
+                li
+                    a(href='/sortbyspace/Machine Learning') Machine Learning
+                li
+                    a(href='/sortbyspace/System') System
+                li
+                    a(href='/sortbyspace/Javascript') Javascript
+        <div class="content">
+            if user && user.loggedin
+                br
+                <div class="askQuestion">
+                    a(href="/question-form") Ask Question
+                    <div class="userLabel">
+                        h3 #{user.name}
+                        p
+                            a(href="/question-form")
+                                = "What is your question"
+                    </div>
+                </div>
+            div.content-questions
+                each ques in questions
+                    br
+                    div.question(id="question-"+ques._id)
+                        <div class="question-flex">
+                            <div class="question-left">
+                                span(class="space")
+                                    = ques.toObject().space
+                                h3
+                                    = ques.creatorName
+                                h4
+                                    = ques.toObject().time.toString().slice(4, 15)
+                            </div>
+                            <div class="question-right">
+                                h3
+                                    a(href='/detail/qid'+ques.toObject()._id)
+                                        = ques.toObject().title
+
+                                p
+                                    = ques.toObject().content
+                            </div>
+                        </div>
+                        <div class="question-bottom">
+                        span
+                            if user
+                                a(href="/upvote/qid"+ques.toObject()._id)
+                                    = "Upvote(" + ques.toObject().up.length + ")"
+                            else
+                                a(href="#")
+                                    = "Upvote(" + ques.toObject().up.length + ")"
+
+                        span
+                             button(class="ans-btn" href="#answer-block-of-ques-"+ques.toObject()._id)
+                                = "Answers(" + ques.toObject().answer.length + ")"
+                        </div>
+                    br
+                    div( class = "ans-block" id="answer-block-of-ques-"+ques.toObject()._id)
+                        <div class="answer-hidden">
+                            each ans in ques.answer
+                                <div class="answer">
+                                    div.name-date-block
+                                        span.name
+                                            = ans.uname
+                                        span.date
+                                            = 'answered on ' + ans.toObject().time.toString().slice(4, 15)
+                                    <div class = "answer-description">
+                                        p
+                                            = ans.content
+                                    </div>
+                                </div>
+                            if user
+                                <div class="user-answer">
+                                    div.user-name
+                                        = user.name
+                                    div.answer-label
+                                        form(action="/detailques/qid" + ques._id method="POST")
+                                            input(type="textarea" rows="2" cols="50" name="userAnswer" placeholder= "Post your new answer.")
+                                            input(type="submit" class="hidden")
+                                </div>
+
+
+

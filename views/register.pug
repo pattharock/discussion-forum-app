@@ -1,0 +1,42 @@
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='stylesheet' href='/style/style.css')
+        title Kohra
+    body.register
+        a(href="/" id="back")
+            = "Back to Home"
+        <div class="form-register">
+            <h1>Register an Account</h1>
+            <form action="register" method="POST">
+                <p>
+                    <label for="userName">Name</label>
+                    <input type="text" name="userName" placeholder="Enter Name">
+                </p>
+                <p>
+                    <label for="userEmail">Email</label>
+                    <input type="email" name="userEmail" placeholder="Enter Email">
+                </p>
+                <p>
+                    <label for="userPassword1">Password</label>
+                    <input type="password" name="userPassword1" placeholder="Enter Password">
+                    <span id="chkPwd"></span>
+                </p>
+                <p>
+                    <label for="userPassword2">Confirm Password</label>
+                    <input type="password" name="userPassword2" placeholder="Enter Password Again">
+                </p>
+                span#registerMsg
+                    = msg || ""
+                <br>
+                a#registerLogin(href="/login")
+                    if msg && login
+                        = 'Log In'
+                    else
+                        = ""
+                <br>
+                <input type="submit" value="Register">
+            </form>
+        </div>

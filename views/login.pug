@@ -1,0 +1,31 @@
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='stylesheet' href='/style/style.css')
+        title Kohra
+    body.login
+        a(href="/" id="back")
+            = "Back to Home"
+        <div class="form-login">
+            <h1>Log In to your Account</h1>
+            <form action="login" method="POST">
+                <p>
+                    <label for="userEmail">Email</label>
+                    <input type="email" name="userEmail" placeholder="Enter Email">
+                </p>
+                <p>
+                    <label for="userPassword">Password</label>
+                    <input type="password" name="userPassword" placeholder="Enter Password">
+                </p>
+                span#loginMsg
+                    = msg || ""
+                <br>
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+        <div class="form-register">
+            <p>Do not have an account?</p>
+            <a href="/register">Register</a>
+        </div>
